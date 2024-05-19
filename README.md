@@ -18,3 +18,7 @@ This guide shows step by step how to integrate GRPC Files for Swift language
 4. grpc-swift
 > brew install grpc-swift
 #### Adding GRPC dependencies with Swift Package Manager
+
+## Exporting the proto file
+> protoc --swift_out=. vpncenter.proto -> Proto Name
+> protoc “Proto Name” --grpc-swift_opt=Client=true,Server=false --grpc-swift_out=. 
