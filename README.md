@@ -7,7 +7,7 @@ This guide shows step by step how to integrate GRPC Files for Swift language
 - protobuf
 - grpc
 - grpc-swift
-
+- Evans
 #### Installations
 1.Homebrew
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -17,8 +17,13 @@ This guide shows step by step how to integrate GRPC Files for Swift language
 > brew install grpc
 4. grpc-swift
 > brew install grpc-swift
+5. Evans
+> brew tap ktr0731/evans && brew install evans
+
 #### Adding GRPC dependencies with Swift Package Manager
 
 ## Exporting the proto file
-> protoc --swift_out=. vpncenter.proto -> Proto Name
+1.Proto Swift File
+> protoc --swift_out=. "protoName" -> Proto Name
+2. grpc proto swift file
 > protoc “Proto Name” --grpc-swift_opt=Client=true,Server=false --grpc-swift_out=. 
